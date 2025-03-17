@@ -75,6 +75,57 @@ sr.reveal('.contact__text', {interval: 200})
 sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all social icon links
+    const socialLinks = document.querySelectorAll(".about__social-icon");
+
+    // Define the URLs for each platform
+    const socialURLs = {
+        "bx bxl-linkedin": "https://www.linkedin.com/in/sibi-glaxon",
+        "bx bxl-github": "https://www.github.com/sibiglaxon",
+    };
+
+    // Loop through each icon and add an event listener
+    socialLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default action
+            
+            // Get the icon class from the <i> tag inside the <a>
+            const iconClass = this.querySelector("i").className;
+
+            // Open the corresponding URL in a new tab
+            if (socialURLs[iconClass]) {
+                window.open(socialURLs[iconClass], "_blank");
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all social media links in the footer
+    const socialLinks = document.querySelectorAll(".footer__social");
+
+    // Define the URLs for each social platform
+    const socialURLs = {
+        "bx bxl-facebook": "https://www.facebook.com/share/14wwnWkypo/",
+        "bx bxl-instagram": "https://www.instagram.com/yesuran_sibi_glaxon?igsh=MXV4aWUyd3l5eWZtcw==",
+    };
+
+    // Add event listeners to each social icon
+    socialLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            // Get the icon class inside the <i> tag
+            const iconClass = this.querySelector("i").className;
+
+            // Open the corresponding URL in a new tab
+            if (socialURLs[iconClass]) {
+                window.open(socialURLs[iconClass], "_blank");
+            }
+        });
+    });
+});
 
 
 
