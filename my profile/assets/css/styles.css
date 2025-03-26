@@ -348,6 +348,44 @@ img{
     font-size: var(--normal-font-size);
     cursor: pointer;
 }
+#resume-title {
+    color: #577ed1; /* This will change the text color to black */
+}
+
+button {
+    background-color: #95cc56;
+    color: rgb(141, 180, 50);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  button:hover {
+    background-color: #e06767;
+  }
+button {
+    background-color: #1aacac; 
+    color: white; 
+    border: 2px solid #21867e; 
+    padding: 15px 25px; 
+    border-radius: 8px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s, transform 0.2s; 
+  } 
+  button:hover {
+    background-color: #e09e9e;
+    transform: scale(1.05); 
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.3); 
+  }
+  
+  button:active {
+    background-color: #e07f7f; 
+    transform: scale(0.95); 
+  }
 
 /* ===== FOOTER=====*/
 .footer{
@@ -487,3 +525,5 @@ img{
         right: 24%;
     }
 }
+
+  

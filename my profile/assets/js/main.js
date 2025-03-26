@@ -127,5 +127,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".contact__form");
 
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        let name = document.querySelector("input[placeholder='Name']").value.trim();
+        let email = document.querySelector("input[placeholder='Email']").value.trim();
+        let message = document.querySelector("textarea").value.trim();
+
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        if (!validateEmail(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Message:", message);
+
+        alert("Form submitted successfully!");
+        form.reset(); // Clear the form after submission
+    });
+
+    function validateEmail(email) {
+        let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+});
 
